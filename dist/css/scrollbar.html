@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+
+</head>
+<body>
+<style>
+.con{width: 200px;height:200px;background: #999;}
+</style> 
+
+
+<div class='con'>
+
+
+呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲机会刘嘉玲和接口回家了好久好久好呵呵航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空局航空航空局航空局黑客计划夸海口厉害老客户 机会刘嘉玲和接口回家了好久好久好呵呵航空
+
+
+</div>
+<script>
+  
+function scrollConBox(o){
+var $$=function(el){
+return document.querySelector(el);
+};
+var getStyle=function(obj,name){//兼容ie7+ //obj:对象，name:属性名
+   if(obj.currentStyle){
+       return obj.currentStyle[name];
+   }else{
+       return getComputedStyle(obj,false)[name];
+   }
+};
+var con=$$(o.el);
+var scrollHtml='<div class="scrollConBox" style="position:relative; overflow: hidden;"><div class="scrollCon" style="overflow-x:hidden;overflow-y: auto;">'+con.innerHTML+'</div><div class="scrollBox" style="position:absolute; right:-1px;top:0;  height: 100%;width:18px;"><div class="scrollBorder" style="position:absolute; right:1px;top:0;"><div class="scrollBlock"></div></div></div></div>';
+con.innerHTML=scrollHtml;
+var scrollConBox=$$('.scrollConBox');
+var scrollCon=$$('.scrollConBox .scrollCon');
+var scrollBlock=$$('.scrollConBox .scrollBox .scrollBlock');
+var scrollBox=$$('.scrollConBox .scrollBox');
+var scrollBorder=$$('.scrollConBox .scrollBorder');
+scrollCon.style.height=getStyle(con,'height');
+scrollBorder.style.cssText=scrollBorder.style.cssText+o.scrollBorder;
+scrollBlock.style.cssText=o.scrollBlock;
+
+
+var bNum=scrollCon.scrollHeight/scrollCon.clientHeight;
+var scrollBlockHeight=Math.ceil(scrollCon.clientHeight/(bNum+1));
+var spaceHeight=scrollCon.clientHeight-scrollBlockHeight;
+var scrollHeight=scrollCon.scrollHeight-scrollCon.clientHeight;
+var divScroll=scrollHeight/spaceHeight;
+scrollBlock.style.height=scrollBlockHeight+'px';
+scrollBox.style.backgroundColor=getStyle(con,'backgroundColor');
+if (scrollHeight==0) {
+scrollBox.style.display='none';
+};
+var marginTop=0;
+scrollCon.onscroll=function() { 
+  
+  marginTop=scrollCon.scrollTop;
+  scrollBlock.style.marginTop=marginTop/divScroll+'px';
+};
+};
+//==================================
+//参数说明：
+//el               //class或id
+//scrollBorder     //滑块背景样式
+//scrollBlock      //滑块样式
+//==================================
+
+
+scrollConBox({
+el:'.con',  
+scrollBorder:'background:#fff;border:1px red solid;height: 99.2%',
+ 
+scrollBlock:'width:5px; background:red;'
+ 
+})
+
+</script>
+
+</body>
+</html>
+<!--
+自定义滚动条（原生，兼容ie8以上）
+https://blog.csdn.net/SkyGst/article/details/54695279
+-->

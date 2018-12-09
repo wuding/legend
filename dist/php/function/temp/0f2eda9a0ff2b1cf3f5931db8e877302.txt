@@ -1,0 +1,60 @@
+
+
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no">
+    <title></title>
+  <script src="//g.alicdn.com/mtb/lib-callapp/1.4.8/??combo.js,callapp.js"></script>
+  <style>
+        body{
+            background-repeat:no-repeat;
+            background-position: left top;
+            background-color: #efeff4;
+            background-size: 100%;
+        	padding: 0;
+            margin: 0; 
+        }
+    </style>
+     <script>
+       //业务点code
+      	var bizCode="tbshare";
+    	//短地址
+    	var shortName = "h.3gF2Zlo";
+    	//目标地址
+    	var url = 'https://uland.taobao.com/coupon/edetail?e=%2Btv6WsmCJ4YGQASttHIRqb3On8zUlpUvOvS9qQafwTwBlq7kqUH1Xg7P3wW0LANX19msRg13%2FeQ3LZW6u56qNWjp926RHPMNEaK6WY%2FSJDRnUtfMCNR1uMHVq%2Fdxq%2FDATJnbK5InWznd4dRbTb5WN9VqM6BWlz38UtqM5E5JIeWKUvBZvddY7m4A7UxLt4cv&traceId=0baf517315372364879692038e&union_lens=lensId:0b832c69_0852_165ea6f4f33_4833&ut_sk=1.utdid_null_1537236488047.TaoPassword-Outside.taoketop&sp_tk=77+lT0FlQWJWTlp5V3Dvv6U=&cpp=1&shareurl=true&spm=a313p.22.28n.971765975202&short_name=h.3gF2Zlo';
+    	//短地址有问题时跳转的地址
+    	var invalidUrl = "http://m.tb.cn/scanError.htm";
+    	//黄金令箭埋点值
+    	var ecode="ecode.2.1";
+    	//短地址状态
+    	var status = "true";
+			//是否是阿里系APP访问
+			var isAliApp = "false";
+			//是否强制在body里插入img节点（tbshare有类似需求）
+			var mustImg = "true";
+		
+     //客户端应用信息，见App.java定义,这些变量在页面上已经用不到了，全部在java内部判断用了
+     var app= "";//如果是微信，需要特殊处理
+     //客户端系统信息，见OS.java定义
+     var os = "";//访问的系统
+		
+		//客户端打开的方式，见xcode里Constant.java中定义
+		var appMethod="replace";
+		//selfview的模板不用在这里输出，不然会js变量冲突
+					var methodString="1";
+		
+		//创建码时，指定码的extraStr的json字符内容，用于自定义模板页面填坑位用
+					var extraData = {"title":"红人装给您推荐了个宝贝","pic":"http://img.alicdn.com/bao/uploaded/i3/520285204/O1CN011oJTaCsDnJqh4R9_!!520285204.jpg"};
+		       var replacedWxBgPic = ""
+		
+    </script>
+</head>
+	<body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=0b0f66f015372443429786270ef054&asid=AQAAAAC2fKBbUSGuPAAAAADpoY0RTzYyUQ==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+    	    		</body>
+	<script type="text/javascript" src="/assets/scan.js?t=201705231430"></script>
+</html>
