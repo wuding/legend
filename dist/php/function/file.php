@@ -1,6 +1,6 @@
 <?php
 # include 'E:\www\work\netjoin\mr-fact\vendor\wuding\php-ext\src\Filesystem.php';
-include 'E:\www\work\wuding\php-ext\src\Filesystem.php';
+include 'D:/env\www\work\wuding\php-ext\src\Filesystem.php';
 $url = $_GET['url'] ?? 'http://win.web.nf03.sycdn.kuwo.cn/6a03cd58ad212e8863b4756253d14de8/5c9b623e/resource/a3/66/92/195353300.aac';
 
 
@@ -8,7 +8,7 @@ $filesystem = new Ext\Filesystem();
 $data = Ext\Filesystem::getContents($url);
 
 $url = preg_replace(['/:/', '/\/+/'], ['', '/'], $url);
-$url = 'E:/www/legend/dist/' . $url;
+$url = 'D:/env/www/legend/dist/' . $url;
 echo Ext\Filesystem::putContents($url, $data, 'not overwrite');
 # print_r($filesystem::$constants);
 exit;
